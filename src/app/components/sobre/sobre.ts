@@ -19,7 +19,7 @@ export class Sobre {
     { name: 'TypeScript', level: 80 },
     { name: 'Angular', level: 90 },
     { name: 'Node.js', level: 75 },
-    { name: 'Java', level: 70 },
+    { name: 'Java', level: 45 },
     { name: 'Git', level: 85 },
   ];
 }
