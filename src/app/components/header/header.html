@@ -1,0 +1,46 @@
+<section id="home" class="min-h-screen flex items-center justify-center relative px-4">
+    <div class="text-center z-10 max-w-4xl mx-auto">
+
+        <!-- Caixa com o texto -->
+        <div class="mb-8 inline-block">
+            <div class="border border-[#00e1ff] bg-[#0e0e11]/50 backdrop-blur-sm rounded-lg p-6 glow-cyan">
+                <h1 class="font-mono text-2xl md:text-4xl text-[#00e1ff] mb-4 text-left">
+                    {{ displayText }}
+                    <span class="inline-block w-3 h-8 md:h-10 bg-[#00e1ff] ml-2 transition-opacity duration-200"
+                        [class.opacity-0]="!showCursor" [class.opacity-0]="!showCursor">
+                    </span>
+                </h1>
+            </div>
+        </div>
+
+        <!-- Titulo Principal -->
+        <h2 class="font-orbitron text-3xl md:text-5xl lg:text-6xl font-bold mb-6 text-glow-cyan">
+            <span class="text-[#00e1ff]">ENGENHEIRO DE </span>
+            <span class="text-[#ff66ff]"> SOFTWARE</span>
+        </h2>
+
+        <!-- Descrição -->
+        <p class="text-lg md:text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+            Estudante de Engenharia de Software explorando o universo da programação com paixão por tecnologia e cultura
+            geek.
+        </p>
+
+        <!-- Botões -->
+        <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+            <button (click)="scrollToSection('projetos')"
+                class="bg-[#00e1ff] text-black hover:bg-[#00e1ff]/90 glow-cyan font-orbitron font-bold text-lg px-8 py-3 rounded-lg transition-all">
+                Ver Projetos
+            </button>
+            <button (click)="scrollToSection('contato')"
+                class="border border-[#ff66ff] text-[#ff66ff] hover:bg-[#ff66ff]/10 glow-purple font-orbitron font-bold text-lg px-8 py-3 rounded-lg transition-all">
+                Contato
+            </button>
+        </div>
+
+
+        <!-- Ícone de seta -->
+        <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce">
+            <lucide-icon name="chevron-down" class="w-8 h-8 text-[#00e1ff]"></lucide-icon>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,46 @@
+<section id="contato" class="min-h-screen py-20 px-4 relative z-10 flex items-center">
+    <div class="container mx-auto max-w-4xl text-center">
+
+        <!-- Título -->
+        <h2 class="font-orbitron text-4xl md:text-5xl font-bold mb-4 text-glow-green">
+            <span class="text-[#00ff00]">&lt;</span>
+            <span class="text-[#00e1ff]">CONTATO</span>
+            <span class="text-[#00ff00]">/&gt;</span>
+        </h2>
+        <p class="text-[#00ff00] mb-12 font-mono">// Let's Connect</p>
+
+        <!-- Card principal -->
+        <div class="border border-[#00ff00]/30 bg-card/50 backdrop-blur-sm rounded-lg p-8 glow-green mb-8">
+            <lucide-icon name="terminal" class="w-16 h-16 text-[#00ff00] mx-auto mb-6"></lucide-icon>
+            <p class="font-mono text-[#7ab8b8] text-lg mb-6">
+                <span class="text-[#00ff00]">&gt;</span> Sempre aberto a novas conexões e oportunidades!
+            </p>
+            <p class="font-mono text-[#7ab8b8] text-lg mb-8">
+                <span class="text-[#00ff00]">&gt;</span> Entre em contato através das plataformas abaixo:
+            </p>
+
+            <!-- Botões de contato -->
+            <div class="grid md:grid-cols-3 gap-6">
+                <a *ngFor="let contact of contato" [href]="contact.link" target="_blank" rel="noopener noreferrer"
+                    class="border-2 rounded-lg p-6 transition-all duration-300 h-auto flex flex-col items-center gap-3 border-current hover:text-[#0e0e11]"
+                    [ngClass]="[contact.color, contact.glow]">
+                    <lucide-icon [name]="contact.icon" class="w-8 h-8"></lucide-icon>
+                    <span class="font-orbitron font-bold">{{ contact.name }}</span>
+                </a>
+            </div>
+        </div>
+
+        <!-- Rodapé -->
+        <div class="font-mono text-sm text-muted-foreground">
+            <p  class="font-mono text-[#7ab8b8] mb-2">
+                <span class="text-[#00ff00]">&gt;</span> Desenvolvido com
+                <span class="text-[#00e1ff]">Angular</span> +
+                <span class="text-[#ff66ff]">TypeScript</span> +
+                <span class="text-[#00ff00]">Tailwind</span>
+            </p>
+            <p class="font-mono text-[#7ab8b8]">
+                <span class="text-[#00ff00]">&gt;</span> © 2025 Kleber.exe - Todos Os Direitos Reservados
+            </p>
+        </div>
+    </div>
+</section>

@@ -1,1 +1,46 @@
-/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;700&display=swap');
+
+@import "tailwindcss";
+
+/* ==== EFEITOS DE GLOW ==== */
+
+/* Efeito base para texto brilhante */
+.text-glow-cyan {
+  text-shadow:
+    0 0 13px #00e1ff,
+    0 0 1px rgba(0, 225, 255, 0.4);
+}
+
+.text-glow-green {
+  text-shadow:
+    0 0 13px #00ff00,
+    0 0 1px rgba(0, 255, 102, 0.4);
+}
+
+.text-glow-purple {
+  text-shadow:
+    0 0 25px #9947eb,
+    0 0 1px rgba(153, 71, 235, 0.4);
+}
+
+.text-glow-accent {
+  text-shadow: 0 0 10px var(--tw-color-accent, #00e1ff),
+               0 0 20px var(--tw-color-accent, #00e1ff);
+}
+
+/* Glow em volta de botões, caixas, etc */
+.glow-cyan {
+  box-shadow:
+    0 0 14px rgba(0, 225, 255, 0.7);
+}
+
+.glow-green {
+  box-shadow:
+    0 0 14px rgba(0, 255, 0, 0.7);
+}
+
+.glow-purple {
+  box-shadow:
+    0 0 14px rgba(153, 71, 235, 0.7);
+}

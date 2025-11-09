@@ -1,0 +1,24 @@
+<nav class="fixed top-0 left-0 right-0 z-50 transition-all duration-300" [ngClass]="{
+    'bg-card/80 backdrop-blur-lg border-b border-[#00e1ff]/30': scrolled,
+    'bg-transparent': !scrolled
+  }">
+    <div class="container mx-auto px-4 py-4 flex items-center justify-between">
+        <!-- Logo -->
+        <div class="flex items-center gap-2 cursor-pointer" (click)="scrollToSection('home')">
+            <lucide-icon name="Terminal" class="w-6 h-6 text-[#00e1ff]"></lucide-icon>
+            <span class="font-orbitron font-bold text-xl text-[#00e1ff] text-glow-cyan">
+                KLEBER.EXE
+            </span>
+        </div>
+
+        <!-- Links -->
+        <div class="hidden md:flex gap-8">
+            <button *ngFor="let item of ['home', 'sobre', 'projetos', 'contato']" (click)="scrollToSection(item)"
+                class="relative text-[#ccffff] hover:text-[#00e1ff] transition-colors duration-300 font-medium uppercase text-sm tracking-wider group">
+                <span class="relative z-10">{{ item | titlecase }}</span>
+                <span
+                    class="absolute bottom-0 left-0 w-0 h-0.5 bg-[#00e1ff] group-hover:w-full transition-all duration-300 glow-cyan"></span>
+            </button>
+        </div>
+    </div>
+</nav>

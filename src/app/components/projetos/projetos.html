@@ -1,0 +1,51 @@
+<section id="projetos" class="min-h-screen py-20 px-4 relative z-10">
+    <div class="container mx-auto max-w-7xl">
+        <h2 class="font-orbitron text-4xl md:text-5xl font-bold text-center mb-4 text-glow-purple">
+            <span class="text-[#9947eb]">&lt;</span>
+            <span class="text-[#00e1ff]">PROJETOS</span>
+            <span class="text-[#9947eb]">/&gt;</span>
+        </h2>
+
+        <p class="text-center text-[#00ff00] mb-12 font-mono">// My Work</p>
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div *ngFor="let project of projects"
+                class="group relative border border-[#00e1ff]/30 bg-card/50 backdrop-blur-sm rounded-lg overflow-hidden hover:border-[#00e1ff] transition-all duration-300 hover:scale-105 hover:glow-cyan">
+                <div class="absolute inset-0 opacity-0 group-hover:opacity-10 transition-opacity duration-300"
+                    [ngClass]="'bg-gradient-to-br ' + project.gradient"></div>
+
+                <div class="p-6 relative z-10">
+                    <h3 class="font-orbitron text-xl font-bold mb-3 text-[#00e1ff] group-hover:text-glow-cyan">
+                        {{ project.title }}
+                    </h3>
+
+                    <p class="text-[#7ab8b8] mb-4 text-sm">
+                        {{ project.description }}
+                    </p>
+
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span *ngFor="let tech of project.tech"
+                            class="text-xs px-2 py-1 bg-background/70 border border-[#00ff00]/30 rounded text-[#00ff00] font-mono">
+                            {{ tech }}
+                        </span>
+                    </div>
+
+                    <div class="flex gap-3">
+                        <a [href]="project.github" target="_blank" rel="noopener noreferrer"
+                            class="flex-1 border border-[#00e1ff] text-[#00e1ff] text-center py-2 rounded-xl hover:bg-[#00e1ff] hover:text-black transition-all">
+                            <lucide-icon name="github" class="w-4 h-4 inline mr-2"></lucide-icon>
+                            Code
+                        </a>
+
+                        <a [href]="project.demo" target="_blank" rel="noopener noreferrer"
+                            class="flex-1 bg-[#9947eb] text-white text-center py-2 rounded-xl hover:bg-[#9947eb]/90 transition-all">
+                            <lucide-icon name="external-link" class="w-4 h-4 inline mr-2"></lucide-icon>
+                            Demo
+                        </a>
+                    </div>
+                </div>
+
+                <div class="absolute top-2 right-2 w-2 h-2 bg-[#00ff00] rounded-full animate-pulse"></div>
+            </div>
+        </div>
+    </div>
+</section>
