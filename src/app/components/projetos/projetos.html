@@ -7,11 +7,28 @@
         </h2>
 
         <p class="text-center text-[#00ff00] mb-12 font-mono">// My Work</p>
+
         <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             <div *ngFor="let project of projects"
                 class="group relative border border-[#00e1ff]/30 bg-card/50 backdrop-blur-sm rounded-lg overflow-hidden hover:border-[#00e1ff] transition-all duration-300 hover:scale-105 hover:glow-cyan">
+
                 <div class="absolute inset-0 opacity-0 group-hover:opacity-10 transition-opacity duration-300"
                     [ngClass]="'bg-gradient-to-br ' + project.gradient"></div>
+
+                <!-- Área de imagem ou placeholder -->
+                <div class="relative w-full h-48 overflow-hidden bg-gray-700 flex items-center justify-center">
+                    <div *ngIf="project.images && project.images.length > 0; else noImage">
+                        <img [src]="project.images[project.currentIndex ?? 0]" [alt]="project.title + ' screenshot'"
+                            class="w-full h-full object-cover" />
+                        <div class="absolute inset-0 bg-gradient-to-t from-card/80 to-transparent"></div>
+                    </div>
+                    <ng-template #noImage>
+                        <div class="text-gray-400 text-center">
+                            <lucide-icon name="image-off" class="w-12 h-12 mx-auto mb-2"></lucide-icon>
+                            <p class="font-mono text-sm">Sem Imagens</p>
+                        </div>
+                    </ng-template>
+                </div>
 
                 <div class="p-6 relative z-10">
                     <h3 class="font-orbitron text-xl font-bold mb-3 text-[#00e1ff] group-hover:text-glow-cyan">
@@ -43,7 +60,6 @@
                         </a>
                     </div>
                 </div>
-
                 <div class="absolute top-2 right-2 w-2 h-2 bg-[#00ff00] rounded-full animate-pulse"></div>
             </div>
         </div>
