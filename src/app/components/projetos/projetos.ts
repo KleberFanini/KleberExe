@@ -31,6 +31,26 @@ export class Projetos implements OnInit, OnDestroy {
       images: ['/assets/Imagens/GeekShop/Tela-Home.png', '/assets/Imagens/GeekShop/Tela-Login.png', '/assets/Imagens/GeekShop/Tela-Catalogo.png', '/assets/Imagens/GeekShop/Tela-Ligas.png', '/assets/Imagens/GeekShop/Tela-Contato.png'],
       currentIndex: 0,
     },
+    {
+      title: 'MarcosEngenharia',
+      description: 'Plataforma web da MarcosEngenharia, destacando serviços e projetos de engenharia com qualidade e precisão.',
+      tech: ['Angular', 'TypeScript', 'Tailwind', 'Lucide'],
+      github: 'https://github.com/KleberFanini/MarcosEngenharia',
+      demo: '#',
+      gradient: 'from-primary to-secondary',
+      images: ['/assets/Imagens/MarcosEngenharia/Inicio.png', '/assets/Imagens/MarcosEngenharia/Portifólio.png', '/assets/Imagens/MarcosEngenharia/Projetos.png', '/assets/Imagens/MarcosEngenharia/Contato.png'],
+      currentIndex: 0,
+    },
+    {
+      title: 'Agendamento Psicológico',
+      description: 'Uma Plataforma web, criada para pacientes agendarem por si próprios as consultas com a psicologa que desejar.',
+      tech: ['Angular', 'TypeScript', 'Tailwind', 'Lucide'],
+      github: 'https://github.com/KleberFanini/web-agendamento-psicologico',
+      demo: '#',
+      gradient: 'from-primary to-secondary',
+      images: ['/assets/Imagens/Orange/inicio.png', '/assets/Imagens/Orange/sobre.png', '/assets/Imagens/Orange/agendar.png', '/assets/Imagens/Orange/perfil.png'],
+      currentIndex: 0,
+    }
   ];
 
   ngOnInit(): void {
